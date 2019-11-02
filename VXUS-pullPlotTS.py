@@ -1,4 +1,6 @@
-# Pulling and plotting VXUS ETF price data
+# With this code snippet, we are pulling and plotting VXUS ETF daily closing price data via
+# the Alpha Vantage API. The below was adapted from code I found online by a Medium contributor
+# and Alpha Vantage dev advocate. It has been cleaned up and enhanced.
 
 # Import the software libraries whose functionality we will rely on
 from alpha_vantage.timeseries import TimeSeries
@@ -12,7 +14,7 @@ key = 'INPUT YOUR KEY HERE'
 # Choose your output format (pandas tabular), or default to JSON (python dict)
 ts = TimeSeries(key, output_format='pandas')
 
-# Get the data, which returns a tuple
+# Get the data, which returns a tuple of 100 records
 # vxus_data is a pandas dataframe, vxus_meta_data is a dict
 vxus_data, vxus_meta_data = ts.get_daily(symbol='VXUS')
 
