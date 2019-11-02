@@ -1,2 +1,2 @@
 # fintech
-Financial coding with Python.
+Financial coding with languages such as Python.
