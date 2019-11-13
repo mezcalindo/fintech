@@ -1,4 +1,5 @@
 # Pulling, viewing, and exporting VXUS ETF price data
+
 # Import the software libraries whose functionality we will rely on
 from alpha_vantage.timeseries import TimeSeries
 
