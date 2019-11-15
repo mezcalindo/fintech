@@ -18,8 +18,8 @@ ts = TimeSeries(key, output_format='pandas')
 # Get the full set of data available via the Alpha Vantage API for the tickers of interest
 # vgtsx_data is a pandas dataframe, vgtsx_meta_data is a dict
 # vtsmx_data is a pandas dataframe, vtsmx_meta_data is a dict
-vgtsx_data, vgtsx_meta_data = ts.get_daily(symbol='VGTSX', outputsize=’full’)
-vtsmx_data, vtsmx_meta_data = ts.get_daily(symbol=’VTSMX’, outputsize=’full’)
+vgtsx_data, vgtsx_meta_data = ts.get_daily(symbol='VGTSX', outputsize='full')
+vtsmx_data, vtsmx_meta_data = ts.get_daily(symbol='VTSMX', outputsize='full')
 
 # Combine the key columns of daily closing prices from the two individual dataframes
 # containing data on each fund into one shiny new dataframe called vgtsx_vtsmx_data
@@ -34,7 +34,7 @@ vgtsx_vtsmx_data.columns = ['VGTSX close', 'VTSMX close']
 # Visualize the data by determining the plot size and style
 figure(num=None, figsize=(15, 6), dpi=80, facecolor='w', edgecolor='k')
 vgtsx_data['4. close'].plot()
-vtsmx_data[‘4. close’].plot()
+vtsmx_data['4. close'].plot()
 plt.gca().invert_xaxis()
 plt.tight_layout()
 plt.grid()
