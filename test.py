@@ -29,7 +29,9 @@ vgtsx_vtsmx_data = pd.concat([vgtsx_data['4. close'], vtsmx_data['4. close']], a
 vgtsx_vtsmx_data
 
 # Rename the columns in this new dataframe with more descriptive names
+# and sort the data in ascending order by date
 vgtsx_vtsmx_data.columns = ['VGTSX close', 'VTSMX close']
+vgtsx_vtsmx_data = vgtsx_vtsmx_data.sort_values(by=['date'], ascending=True)
 
 # Visualize the data by determining the plot size and style
 figure(num=None, figsize=(15, 6), dpi=80, facecolor='w', edgecolor='k')
@@ -37,7 +39,12 @@ figure(num=None, figsize=(15, 6), dpi=80, facecolor='w', edgecolor='k')
 # vtsmx_data['4. close'].plot()
 vgtsx_vtsmx_data['VGTSX close'].plot()
 vgtsx_vtsmx_data['VTSMX close'].plot()
-plt.gca().invert_xaxis()
+# plt.gca().invert_xaxis()
 plt.tight_layout()
 plt.grid()
 plt.show()
+
+# Find the percentage change of the day's closing price over the previous day's
+# for both funds and store the results in a new dataframe, then check our results
+pctDelta_data = vgtsx_vtsmx_data.pct_change()
+pctDelta_data
