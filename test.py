@@ -33,8 +33,10 @@ vgtsx_vtsmx_data.columns = ['VGTSX close', 'VTSMX close']
 
 # Visualize the data by determining the plot size and style
 figure(num=None, figsize=(15, 6), dpi=80, facecolor='w', edgecolor='k')
-vgtsx_data['4. close'].plot()
-vtsmx_data['4. close'].plot()
+# vgtsx_data['4. close'].plot()
+# vtsmx_data['4. close'].plot()
+vgtsx_vtsmx_data['VGTSX close'].plot()
+vgtsx_vtsmx_data['VTSMX close'].plot()
 plt.gca().invert_xaxis()
 plt.tight_layout()
 plt.grid()
