@@ -48,3 +48,7 @@ plt.show()
 # for both funds and store the results in a new dataframe, then check our results
 pctDelta_data = vgtsx_vtsmx_data.pct_change()
 pctDelta_data
+
+# Find the correlation coefficient for the returns of the funds over the entire period
+corr_data = pctDelta_data['VGTSX close'].corr(pctDelta_data['VTSMX close'])
+corr_data
