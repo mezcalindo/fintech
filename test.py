@@ -67,3 +67,15 @@ corr_dataD
 # Do the same for monthly data
 corr_dataM = pctDelta_dataM['VGTSX monthly close'].corr(pctDelta_dataM['VTSMX monthly close'])
 corr_dataM
+
+# Find the standard deviations (volatility) of daily returns for the funds over the entire period
+std_dataD_vgtsx = pctDelta_dataD['VGTSX daily close'].std(axis=0)
+std_dataD_vtsmx = pctDelta_dataD['VTSMX daily close'].std(axis=0)
+std_dataD_vgtsx
+std_dataD_vtsmx
+
+# Do the same for monthly data
+std_dataM_vgtsx = pctDelta_dataM['VGTSX monthly close'].std(axis=0)
+std_dataM_vtsmx = pctDelta_dataM['VTSMX monthly close'].std(axis=0)
+std_dataM_vgtsx
+std_dataM_vtsmx
