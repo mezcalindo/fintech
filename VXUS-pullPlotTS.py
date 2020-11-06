@@ -21,7 +21,11 @@ vxus_data, vxus_meta_data = ts.get_daily(symbol='VXUS')
 # Visualize the data by determining the plot size and style
 figure(num=None, figsize=(15, 6), dpi=80, facecolor='w', edgecolor='k')
 vxus_data['4. close'].plot()
+
+# This following line in case you need to reverse the axis if it is not displaying data in chronological order.
+# If not required, comment it out.
 plt.gca().invert_xaxis()
+
 plt.tight_layout()
 plt.grid()
 plt.show()
